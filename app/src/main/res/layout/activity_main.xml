@@ -4,38 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/colorPrimary">
 
     <Button
         android:id="@+id/downloadButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/urlField" />
+        android:layout_width="114dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/regular"
+        android:text="SEARCH"
+        android:textColor="@color/colorAccent"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@+id/urlField"
+        app:layout_constraintTop_toTopOf="@+id/urlField" />
 
     <EditText
         android:id="@+id/urlField"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_width="237dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="32dp"
+        android:cursorVisible="true"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:textColor="@color/colorPrimaryDark"
+        android:textCursorDrawable="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.183"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/outputView"
-        android:layout_width="330dp"
-        android:layout_height="469dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="288dp"
+        android:layout_height="294dp"
+        android:layout_marginTop="36dp"
+        android:textSize="60sp"
+        android:textColor="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/downloadButton"
-        app:layout_constraintVertical_bias="0.44" />
+        app:layout_constraintTop_toBottomOf="@+id/urlField" />
 </androidx.constraintlayout.widget.ConstraintLayout>

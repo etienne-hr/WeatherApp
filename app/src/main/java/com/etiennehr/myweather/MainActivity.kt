@@ -38,7 +38,9 @@ class MainActivity : AppCompatActivity() {
     fun launchJsonObjectRequest(url:String){
         val jsonObjectRequest = JsonObjectRequest(Request.Method.GET, url, null, Response.Listener {taskObject ->
             val main = taskObject.getJSONObject("main")
-            outputView.text = main.getString("temp") + "°C"
+            val temp = main.getString("temp") + "°C"
+            val city = urlField.text
+            outputView.text = "$city : $temp"
         }, Response.ErrorListener {
             outputView.text = "unknown city"
         })
