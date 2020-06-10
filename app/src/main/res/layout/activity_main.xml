@@ -9,29 +9,27 @@
 
     <Button
         android:id="@+id/downloadButton"
-        android:layout_width="114dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:background="@drawable/button"
-        android:fontFamily="@font/regular"
-        android:text="SEARCH"
-        android:textColor="@color/colorAccent"
-        android:textSize="25sp"
-        app:layout_constraintStart_toEndOf="@+id/urlField"
-        app:layout_constraintTop_toTopOf="@+id/urlField" />
+        android:layout_width="14dp"
+        android:layout_height="13dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/search"
+        app:layout_constraintEnd_toEndOf="@+id/urlField"
+        app:layout_constraintHorizontal_bias="0.946"
+        app:layout_constraintStart_toStartOf="@+id/urlField"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/urlField"
         android:layout_width="237dp"
         android:layout_height="38dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="36dp"
         android:cursorVisible="true"
         android:ems="10"
+        android:fontFamily="@font/regular"
         android:textColor="@color/colorPrimaryDark"
         android:textCursorDrawable="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.183"
+        app:layout_constraintHorizontal_bias="0.442"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,11 +37,22 @@
         android:id="@+id/outputView"
         android:layout_width="288dp"
         android:layout_height="294dp"
-        android:layout_marginTop="36dp"
-        android:textSize="60sp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/light"
         android:textColor="@color/colorPrimaryDark"
+        android:textSize="60sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.626"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cityView" />
+
+    <TextView
+        android:id="@+id/cityView"
+        android:layout_width="239dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/urlField" />
 </androidx.constraintlayout.widget.ConstraintLayout>
