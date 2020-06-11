@@ -37,15 +37,15 @@ class MainActivity : AppCompatActivity() {
     fun launchJsonObjectRequest(url:String){
         val jsonObjectRequest = JsonObjectRequest(Request.Method.GET, url, null, Response.Listener {taskObject ->
             val main = taskObject.getJSONObject("main")
-            val temp = main.getString("temp") + "°"
-            val tempMax = main.getString("temp_max") + "°"
-            val tempMin = main.getString("temp_min") + "°"
+            val temp = main.getInt("temp")
+            val tempMax = main.getInt("temp_max")
+            val tempMin = main.getInt("temp_min")
             val cityData = urlField.text
             if (cityData.isEmpty())
             {
                 cityView.text = lastCity
-                maxtempView.text = tempMax
-                mintempView.text = tempMin
+                maxtempView.text = "$tempMax°"
+                mintempView.text = "$tempMin°"
             }
             else
             {
@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
                 stockedData()
                 urlField.text = null
             }
-            outputView.text = "$temp"
+            outputView.text = "$temp°"
         }, Response.ErrorListener {
             outputView.text = "unknown"
         })
